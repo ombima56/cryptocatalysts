@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Construction Project Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .form-group input[type="date"] {
+            width: auto;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Road Construction Project Information</h1>
+    </header>
+
+    <div class="container">
+        <h2>Project Overview</h2>
+        <p>This document outlines the procedures for awarding a road construction contract to a contractor and the payment processes by the national government.</p>
+        
+        <h2>1. Planning and Budgeting</h2>
+        <p>Identify the need for road construction, conduct feasibility studies, and allocate funds in the national budget.</p>
+
+        <h2>2. Project Design and Approval</h2>
+        <p>Prepare detailed project designs, including environmental impact assessments, and obtain necessary approvals.</p>
+
+        <h2>3. Tendering Process</h2>
+        <p>Develop tender documents, advertise the tender, and screen potential contractors.</p>
+
+        <h2>4. Bid Evaluation and Contractor Selection</h2>
+        <p>Evaluate bids based on technical capability, experience, and cost, and select the most suitable contractor.</p>
+
+        <h2>5. Contract Management and Execution</h2>
+        <p>Conduct a kick-off meeting, mobilize resources, and supervise the construction.</p>
+
+        <h2>6. Payment Process</h2>
+        <p>Payments are made in installments based on project milestones. Each payment is verified and documented.</p>
+
+        <h2>7. Completion and Handover</h2>
+        <p>Conduct final inspections and hand over the completed road to the relevant authority.</p>
+
+        <h2>8. Audit and Review</h2>
+        <p>Conduct audits to ensure transparency and document lessons learned for future projects.</p>
+
+        <h2>Project Registration and Form Submission</h2>
+        <form id="project-form">
+            <div class="form-group">
+                <label for="project-name">Project Name:</label>
+                <input type="text" id="project-name" name="project-name" required>
+            </div>
+            <div class="form-group">
+                <label for="contractor-name">Contractor Name:</label>
+                <input type="text" id="contractor-name" name="contractor-name" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-email">Contact Email:</label>
+                <input type="email" id="contact-email" name="contact-email" required>
+            </div>
+            <div class="form-group">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date" required>
+            </div>
+            <div class="form-group">
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" name="end-date" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Project Description:</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="geographical-stipulation">Geographical Stipulation:</label>
+                <textarea id="geographical-stipulation" name="geographical-stipulation" required></textarea>
+            </div>
+            <button type="submit">Submit Project</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 National Government Road Construction Project</p>
+    </footer>
+
+</body>
+
+</html>
