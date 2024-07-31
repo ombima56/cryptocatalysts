@@ -82,3 +82,17 @@ $64
 0cd6fa536369ab28c2c46f100a864295ad168dd42b23d1bdb203e5ce45019363
 $286
 {"address":"0cd6fa536369ab28c2c46f100a864295ad168dd42b23d1bdb203e5ce45019363","duration":456,"start":"2024-07-31T06:25:24.870177261+03:00","end":"2024-07-31T06:33:00+03:00","cost":768,"milestones":null,"owner":"antony","awarded":"Dior","oversight":null,"parties":null,"signatures":null}
+*3
+$3
+set
+$64
+a1d7828e253b2f8c3c5f54188b61ad71aab38176e449f8e8c8b239b7cbf3a978
+$291
+{"address":"a1d7828e253b2f8c3c5f54188b61ad71aab38176e449f8e8c8b239b7cbf3a978","duration":89,"start":"2024-07-31T07:54:33.527958088+03:00","end":"2024-07-31T07:56:02+03:00","cost":67437373,"milestones":null,"owner":"Johnteh","awarded":"Dior","oversight":null,"parties":null,"signatures":null}
+*3
+$3
+set
+$64
+52338d6cb4f7678e167718a8d63043a9bdcdaa3f614decb8636225ae6697d5f5
+$292
+{"address":"52338d6cb4f7678e167718a8d63043a9bdcdaa3f614decb8636225ae6697d5f5","duration":56,"start":"2024-07-31T08:09:21.829514851+03:00","end":"2024-07-31T08:10:17+03:00","cost":90003878,"milestones":null,"owner":"Mikael","awarded":"Mikael","oversight":null,"parties":null,"signatures":null}

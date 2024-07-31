@@ -7,28 +7,53 @@
     <link href="/static/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <nav>
-        <a href="/" class="nav-link">Home</a>
-    </nav>
-    <form action="/contractconfirmation" method="POST">
-        <div class="form-control">
-            <input type="text" name="client" placeholder="client" />
-        </div>
-        <div class="form-control">
-            <input type="text" name="id" placeholder="id number" />
-        </div>
-        <div class="form-control">
-            <input type="text" name="amount" placeholder="Amount" />
-        </div>
-        <div class="form-control">
-            <input type="text" name="recipient" placeholder="recipient" />
-        </div>
-        <div class="form-control">
-            <input type="text" name="duration" placeholder="Duration" />
-        </div>
-        <div>
-            <input type="submit" value="Submit" class="submit" />
-        </div>
-    </form>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/cserveregistration" class="nav-link">Register</a></li>
+                <li><a href="/contractserve" class="nav-link">Contract</a></li>
+                <li><a href="/searches" class="nav-link">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="wrapper">
+        <form action="/contractconfirmation" method="POST">
+            <div class="input-box">
+                <label>
+                    <input type="text" placeholder="your username" name="client" required>
+                    <i class='bx bxs-user'></i>
+                </label>
+            </div>
+            <div class="input-box">
+                <label>
+                    <input type="text" placeholder="your identification number" name="id" required>
+                    <i class='bx bxs-user'></i>
+                </label>
+            </div>
+            <div class="input-box">
+                <label>
+                    <input type="text" placeholder="the total amount involved" name="amount" required>
+                    <i class='bx bxs-user'></i>
+                </label>
+            </div>
+            <div class="input-box">
+                <label>
+                    <input type="text" placeholder="intended recipient" name="recipient" required>
+                    <i class='bx bxs-user'></i>
+                </label>
+            </div>
+            <div class="input-box">
+                <label>
+                    <input type="text" placeholder="duration of the contract" name="duration" required>
+                    <i class='bx bxs-user'></i>
+                </label>
+            </div>
+            <div class="input-box">
+                <div class="register-link">
+                    <button type="submit" class="btn">Create contract</button>
+                </div>
+            </div>
+        </form>
+    </main>
 </body>
 </html>

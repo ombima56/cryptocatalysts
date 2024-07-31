@@ -7,17 +7,31 @@
     <link rel="stylesheet" href="/static/styles.css" />
 </head>
 <body>
-    <div>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/cserveregistration" class="nav-link">Register</a></li>
+                <li><a href="/contractserve" class="nav-link">Contract</a></li>
+                <li><a href="/searches" class="nav-link">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
         <form action="/contractview" method="POST">
-            <caption>
-                Enter the address of a contract whose details<br />
-                 you want to know below in the input
-            </caption>
-            <div>
-                <input type="text" name="address" placeholder="Enter contract address" />
+            <div class="input-box">
+                <caption>
+                    Enter the address of a contract whose details<br />
+                     you want to know below in the input
+                </caption>
             </div>
-            <div>
-                <input type="submit" value="View Contract" />
+            <div class="input-box">
+                <label>
+                    <input type="text" placeholder="Contract address" name="address" required>
+                    <i class='bx bxs-user'></i>
+                </label>
+            </div>
+            <div class="input-box">
+                    <input type="submit" class="btn" value="View Contract" />
             </div>
         </form>
     </div>

@@ -9,17 +9,35 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/cserveregistration" class="nav-link">Register</a></li>
+                <li><a href="/contractserve" class="nav-link">Contract</a></li>
+                <li><a href="/searches" class="nav-link">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
         <h2>Client Login</h2>
         <form id="loginform" action="/cconfirmlogin" method="POST">
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" required>
+            <div class="input-box">
+                <label>
+                    <input type="email" placeholder="Your email" name="email" required>
+                    <i class='bx bxs-user'></i>
+                </label>
             </div>
-            <div class="form-group">
-                <label for="cname">Key</label>
-                <input id="cname" name="cname" required>
+            <div class="input-box">
+                <label>
+                    <input type="text" placeholder="Your username" name="cname" required>
+                    <i class='bx bxs-user'></i>
+                </label>
             </div>
-            <button type="submit">Login</button>
+            <div class="input-box">
+                <div class="register-link">
+                    <button type="submit" class="btn">Login</button>
+                </div>
+            </div>
         </form>
     </div>
 
