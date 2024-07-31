@@ -18,7 +18,7 @@
         </nav>
     </header>
     <main>
-        <div style="width: fit-content; height: fit-content; padding: 1rem; margin: 2rem auto; border: 1px solid rgba(30, 30, 30, 0.4);">
+        <div style="background-color:whitesmoke;width: fit-content; height: fit-content; padding: 1rem; margin: 2rem auto; border: 1px solid rgba(30, 30, 30, 0.4); color:black;">
             <div>
                 <div>This contract is expected to run in the duration detailed below:
                     <br/>
@@ -48,7 +48,7 @@
                 {{ if .Finalize }}
                 <form action="/contractfinalize" method="POST">
                     <input name="address" value="{{ .Contract.Address }}" hidden />
-                    <button type="submit" class="btn larger">Finalize contract</button>
+                    <button style="background-color: rgba(240, 221, 146, 0.8); border:solid black; color:black;" type="submit" class="btn larger">Finalize contract</button>
                 </form>
                 {{ end }}
             </div>
