@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocatalysts | {{ .Cname }}</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+<header>
+    <span>
+        <a href="/" class="nav-link">Home</a>
+    </span>
+</header>
+<body>
+    <div class="container">
+        <h1>{{ .Cname }}</h1>
+        <p>
+            This client identifier should be stored and used to log into the platform on every other visit<br />
+            Note that this key should be kept private and free from prying eyes.
+            <br /><br />
+            <hr />
+            <i style="display: block; text-align: center; font-size: x-large; padding: 1rem;">{{ .Cid }}</i>
+            <hr />
+            <br/>
+        </p>
+        
+        <div>
+            <p><strong>Email: </strong>{{ .Email }}</p>
+            <p><strong>Location: </strong>{{ .Location }}</p>
+            <p><strong>Account: </strong>{{ .Account }}</p>
+            <p><strong>Location: </strong>{{ .Location }}</p>
+        </div>
+    </div>
+</body>
+</html>

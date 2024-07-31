@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Init</title>
+    <link href="/static/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+    <main>
+        <div style="width: fit-content; height: fit-content; padding: 1rem; margin: 2rem auto; border: 1px solid rgba(30, 30, 30, 0.4);">
+            <div>
+                <div>This contract is expected to run in the duration detailed below:
+                    <br/>
+                    <br />Start date: {{ .Start }}
+                    <br/>
+                    <br />End date: {{ .End }}
+                    <br/>
+                    <br />It is expected to last the duration of {{ .Duration }} days.</div>
+            </div>
+            <div>
+                <br/>
+                <hr />
+                <br/>
+                <br/>
+                <br />
+                <div>Cost: {{ .Cost }}</div>
+                <div>Payer: {{ .Owner }}</div>
+                <div>Contructor: {{ .Awarded}}</div>
+                <div>The contract is in digital form and you may use the following address to quesry any further details in this website 
+                    <br/>
+                    <br>
+                    {{ .Address}}
+                </div>
+            </div>
+            <div>
+                <br/>
+                <br/>
+                <a href="/" style="text-decoration: none; font-size: large; color: rgb(3, 65, 67);">Home</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

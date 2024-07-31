@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+    color: #333;
+}
+h2 {
+    margin-top: 20px;
+}
+.nav-link {
+    display: inline-block;
+    padding: .5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    color:rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1);
+}
+p {
+    line-height: 1.6;
+    color: #666;
+}
+form {
+    margin-top: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-group textarea {
+    height: 150px;
+}
+.form-group input[type="date"] {
+    width: auto;
+}
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #555;
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+body {
+    min-height: 100vh;
+}
+nav {
+    display: block;
+    padding: 2rem 5rem;
+    background: khaki;
+}
+.nav-link {
+    text-decoration: none;
+    color: white;
+    padding: .5rem;
+    border: 1px solid rgba(30, 30, 30, 0.234);
+    width: fit-content;
+    font-size: larger;
+    background: rgba(30, 30, 30, 0.234);
+}
+.contract {
+    width: 300px;
+    height: fit-content;
+    padding: 1rem;
+    border: 1px solid rgba(30, 30, 30, 0.234);
+    border-radius: 5px;
+    margin: 2rem 0;
+    text-shadow: 1px 1px aliceblue;
+}
+.dates {
+    padding: 2rem;
+    font-weight: 400;
+    font-size: larger;
+}
+.details {
+    font-size: medium;
+    padding: 1rem;
+}
+.submit {
+    width: 50%;
+    margin: 1rem auto;
+    padding: .45rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form {
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 2rem auto 1rem;
+}
+form > * + * {
+    margin-top: 1rem;
+}
+input[type=submit] {
+    cursor: pointer;
+    margin: auto;
+    width: fit-content;
+    padding: .4rem;
+}
+input[type=text] {
+    margin: auto;
+    padding: .4rem;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Init</title>
+    <link href="/static/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+    <main>
+        <div class="contract">
+            <div class="dates">
+                <div>Duration: {{ .Duration }}</div>
+            </div>
+            <div class="details">
+                <div>Owner: {{ .Client }}</div>
+                <div>Awarded: {{ .Recipient }}</div>
+                <div>Cost: {{ .Amount  }}</div>
+            </div>
+            <div>
+                <form action="/contractcommit" method="POST">
+                    <input name="client" value="{{ .Client }}" hidden />
+                    <input name="recipient" value="{{ .Recipient }}" hidden />
+                    <input name="duration" value="{{ .Duration }}" hidden />
+                    <input name="amount" value="{{ .Amount }}" hidden />
+                    <input type="submit" value="Initiate transaction" style="cursor: pointer;"/>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
