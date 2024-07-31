@@ -7,30 +7,36 @@
     <link rel="stylesheet" href="/static/styles.css" />
 </head>
 <body>
-<header>
-    <span>
-        <a href="/" class="nav-link">Home</a>
-    </span>
-</header>
-<body>
-    <div class="container">
-        <h1>{{ .Cname }}</h1>
-        <p>
-            This client identifier should be stored and used to log into the platform on every other visit<br />
-            Note that this key should be kept private and free from prying eyes.
-            <br /><br />
-            <hr />
-            <i style="display: block; text-align: center; font-size: x-large; padding: 1rem;">{{ .Cid }}</i>
-            <hr />
-            <br/>
-        </p>
-        
-        <div>
-            <p><strong>Email: </strong>{{ .Email }}</p>
-            <p><strong>Location: </strong>{{ .Location }}</p>
-            <p><strong>Account: </strong>{{ .Account }}</p>
-            <p><strong>Location: </strong>{{ .Location }}</p>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/cserveregistration" class="nav-link">Register</a></li>
+                <li><a href="/contractserve" class="nav-link">Contract</a></li>
+                <li><a href="/searches" class="nav-link">Search</a></li>
+                <li><a href="/contractlist" class="nav-link">Contracts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="hero">
+        <div class="container">
+            <h1>{{ .Cname }}</h1>
+            <p>
+                This client identifier should be stored and used to log into the platform on every other visit<br />
+                Note that this key should be kept private and free from prying eyes.
+                <br /><br />
+                <hr />
+                <i style="display: block; text-align: center; font-size: x-large; padding: 1rem;">{{ .Cid }}</i>
+                <hr />
+                <br/>
+            </p>
+            
+            <div>
+                <p><strong>Email: </strong>{{ .Email }}</p>
+                <p><strong>Location: </strong>{{ .Location }}</p>
+                <p><strong>Account: </strong>{{ .Account }}</p>
+                <p><strong>Location: </strong>{{ .Location }}</p>
+            </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>

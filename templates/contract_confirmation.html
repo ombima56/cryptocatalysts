@@ -7,29 +7,38 @@
     <link href="/static/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a>
-    </nav>
-    <main>
-        <div class="contract">
-            <div class="dates">
-                <div>Duration: {{ .Duration }}</div>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/cserveregistration" class="nav-link">Register</a></li>
+                <li><a href="/contractserve" class="nav-link">Contract</a></li>
+                <li><a href="/searches" class="nav-link">Search</a></li>
+                <li><a href="/contractlist" class="nav-link">Contracts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="hero wrapper" style="font-size: x-large;">
+        <p>
+            <div class="contract">
+                <div class="dates">
+                    <div>Duration: {{ .Duration }}</div>
+                </div>
+                <div class="details">
+                    <div>Owner: {{ .Client }}</div>
+                    <div>Awarded: {{ .Recipient }}</div>
+                    <div>Cost: {{ .Amount  }}</div>
+                </div>
+                <div>
+                    <form action="/contractcommit" method="POST">
+                        <input name="client" value="{{ .Client }}" hidden />
+                        <input name="recipient" value="{{ .Recipient }}" hidden />
+                        <input name="duration" value="{{ .Duration }}" hidden />
+                        <input name="amount" value="{{ .Amount }}" hidden />
+                        <input type="submit" class="btn" value="Initiate transaction" style="cursor: pointer;"/>
+                    </form>
+                </div>
             </div>
-            <div class="details">
-                <div>Owner: {{ .Client }}</div>
-                <div>Awarded: {{ .Recipient }}</div>
-                <div>Cost: {{ .Amount  }}</div>
-            </div>
-            <div>
-                <form action="/contractcommit" method="POST">
-                    <input name="client" value="{{ .Client }}" hidden />
-                    <input name="recipient" value="{{ .Recipient }}" hidden />
-                    <input name="duration" value="{{ .Duration }}" hidden />
-                    <input name="amount" value="{{ .Amount }}" hidden />
-                    <input type="submit" value="Initiate transaction" style="cursor: pointer;"/>
-                </form>
-            </div>
-        </div>
+        </p>
     </main>
 </body>
 </html>

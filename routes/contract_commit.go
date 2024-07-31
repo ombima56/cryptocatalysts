@@ -3,7 +3,6 @@ package routes
 import (
 	"cryptocatalysts/core/db"
 	"cryptocatalysts/core/entities"
-	"fmt"
 	"net/http"
 	"strconv"
 	"text/template"
@@ -15,9 +14,9 @@ func ContractCommit(w http.ResponseWriter, r *http.Request) {
 	recipient := r.FormValue("recipient")
 	duration, _ := strconv.Atoi(r.FormValue("duration"))
 
-	contractor, found := db.CRetrieve(recipient)
+	_, found := db.CRetrieve(recipient)
 	if !found {
-		fmt.Fprintf(w, "No such contractor %s", contractor)
+		http.Redirect(w, r, "/500", http.StatusFound)
 		return
 	}
 

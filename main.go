@@ -33,8 +33,14 @@ func main() {
 	http.HandleFunc("/contractconfirmation", routes.ContractConfirmation)
 	http.HandleFunc("/contractcommit", routes.ContractCommit)
 	http.HandleFunc("/contractview", routes.ContractView)
+	http.HandleFunc("/contractfinalize", routes.ContractFinalize)
+	http.HandleFunc("/contractlist", routes.ContractList)
 
 	http.HandleFunc("/searches", routes.Searches)
+
+	http.HandleFunc("/500", routes.Error404)
+	http.HandleFunc("/400", routes.Error500)
+
 
 	// server
 	http.ListenAndServe(":9000", nil)

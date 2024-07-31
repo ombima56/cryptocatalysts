@@ -10,25 +10,25 @@ import (
 )
 
 type Contract struct {
-	Address string `json:"address"`
-	Duration   int           `json:"duration"`
-	Start      time.Time     `json:"start"`
-	End        time.Time     `json:"end"`
-	Cost       int        `json:"cost"`
+	Address    string       `json:"address"`
+	Duration   int          `json:"duration"`
+	Start      time.Time    `json:"start"`
+	End        time.Time    `json:"end"`
+	Cost       int          `json:"cost"`
 	Milestones []*Milestone `json:"milestones"`
-	Owner      string        `json:"owner"`
-	Awarded    string        `json:"awarded"`
-	Oversight  []*Client     `json:"oversight"`
-	Parties    []string      `json:"parties"`
-	Signatures []string      `json:"signatures"`
+	Owner      string       `json:"owner"`
+	Awarded    string       `json:"awarded"`
+	Oversight  []*Client    `json:"oversight"`
+	Parties    []string     `json:"parties"`
+	Signatures []string     `json:"signatures"`
+	Closed     bool         `json:"closed"`
 }
 type Milestone struct {
-	Start    time.Time `json:"start"`
-	End      time.Time `json:"end"`
-	Expectations string `json:"expectations"`
-	Completed    string `json:"completed"`
+	Start        time.Time `json:"start"`
+	End          time.Time `json:"end"`
+	Expectations string    `json:"expectations"`
+	Completed    string    `json:"completed"`
 }
-
 
 func NewContract(client, recipient string, amount int, duration int) (*Contract, bool) {
 	address, err := utils.GenerateRandomHash(64)
@@ -45,12 +45,12 @@ func NewContract(client, recipient string, amount int, duration int) (*Contract,
 	json.NewEncoder(jsonTmpl).Encode(contract)
 
 	contract.Duration = duration
-	contract.Start = time.Now()
-	contract.End = utils.Time(duration);
+	contract.Start = utils.Time(0)
+	contract.End = utils.Time(duration)
 	contract.Cost = amount
 	contract.Owner = client
 	contract.Awarded = recipient
 	contract.Address = address
-	
+
 	return &contract, true
 }

@@ -76,3 +76,27 @@ func ConRetrieve(key string) entities.Contract {
 	}
 	return contract
 }
+
+func ConList() ([]entities.Contract, bool) {
+	db, err := buntdb.Open(LEDGERDB)
+	if err != nil {
+		log.Print(err)
+	}
+	defer db.Close()
+
+	contracts := []entities.Contract{}
+	err = db.View(func(tx *buntdb.Tx) error {
+		err := tx.Ascend("", func(key, value string) bool {
+			//fmt.Printf("key: %s, value: %s\n", key, value)
+			contract :=  entities.Contract{}
+			json.Unmarshal([]byte(value), &contract)
+			contracts = append(contracts, contract)
+			return true // continue iteration
+		})
+		return err
+	})
+	if err != nil {
+		return nil, false
+	}
+	return contracts, true
+}

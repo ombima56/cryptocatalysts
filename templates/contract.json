@@ -3,11 +3,12 @@
 	"duration": "",
 	"start": "",
 	"end": "",
-	"cost": 3000,
+	"cost": 0,
 	"milestones": [],
 	"owner": "",
 	"awarded": "",
 	"oversight": "",
 	"parties": [],
-	"signatures": []
+	"signatures": [],
+	"closed": false
 }

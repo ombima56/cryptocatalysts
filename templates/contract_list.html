@@ -22,15 +22,20 @@
             </header>
             
             <main>
-                <section class="hero">
-                    <div class="hero-content">
-                        <h1>Cryptocatalysts</h1>
-                        <br />
+               <div class="contract-list">
+                {{ range $index, $item := . }}
+                    <div class="contract-list-item">
+                        <h2>{{ $item.Address }}</h2>
                         <hr />
-                        <br />
-                        <p>providing accountability via blockchain technology.</p>
+                        <br/>
+                        <br />Start date: {{ $item.Start }}
+                        <br/>
+                        <br />End date: {{ $item.End }}
+                        <br/>
+                        <br />Total duration: {{ $item.Duration }} days.
                     </div>
-                </section>
+                {{ end }}
+               </div>
             </main>
         
             <footer>
